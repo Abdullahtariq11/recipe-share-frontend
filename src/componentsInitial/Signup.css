@@ -1,0 +1,64 @@
+/* Signup.css */
+
+/* Container styles */
+/* Signup.css */
+
+.Signup-container {
+    text-align: center;
+}
+
+.containerForm  {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: rgb(248, 247, 242);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0.8 0.8, 0.8, 0.8);
+}
+
+form {
+    display: grid;
+    gap: 10px;
+    text-align: left;
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+form span {
+    display: block;
+    margin-bottom: 5px;
+}
+.heading{
+    font-weight: 900;
+    text-align: center;
+    text-decoration: underline;
+}
+form input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 30%;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+}

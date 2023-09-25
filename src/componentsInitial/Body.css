@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    background-color:rgb(248, 247, 242);; 
+  }
+  
+.body-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center; /* Center the text horizontally */
+    
+
+    
+  }
+  
+  .upper-body {
+    text-align: center; /* Center the content in upper-body */
+    display: flex;
+  }
+  
+  h2 {
+    font-size: 2.9rem; /* Slightly larger font size for headings */
+    margin-bottom: 20px; /* Add a bit more space below the heading */
+  }
+  
+  ul {
+    list-style-type: disc;
+    margin-bottom: 20px; /* Add some space below the list */
+  }
+  
+  li {
+    margin-bottom: 8px;
+    list-style: none;
+  }
+  
+  .body-text {
+    font-size: 1.2rem; /* Slightly larger font size for the main text */
+  }
+  
+  .animated-text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: slide 1.5s ease infinite alternate;
+  }
+  
+  .background-container {
+    background:rgb(248, 247, 242); /* Lighten the background color */
+    min-height: 6vh; /* Adjust the height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(100%);
+      opacity: 1;
+    }
+  }
+  /* Media Query for Tablets (768px) */
+@media screen and (max-width: 768px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+    ul{
+        padding-left:10px ;
+    }
+    li {
+        font-size: 0.8rem;
+        
+        margin-bottom: 2px;
+        list-style: none;
+      }
+  
+      .body-container{
+        padding-top: 5px;
+      }
+    .body-text {
+      font-size: 1rem;
+      padding-top: 0px;
+      margin-top: 0px;
+    }
+  }
+  
+  /* Media Query for Mobile Devices (480px) */
+  @media screen and (max-width: 480px) {
+    h2 {
+      font-size: 1.2rem;
+    }
+    ul{
+        margin-left:0px ;
+    }
+    .body-container{
+        padding-top: 5px;
+      }
+    li {
+        font-size: 0.8rem;
+        
+        margin-bottom: 2px;
+        list-style: none;
+      }
+  
+    .body-text {
+      font-size: 0.9rem;
+    }
+  }
+  

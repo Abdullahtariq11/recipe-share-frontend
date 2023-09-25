@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from './ComponentsAfter/Home';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from './componentsInitial/Login';
+import Signup from './componentsInitial/Signup';
+import { useState } from 'react';
+import MyRecipe from './ComponentsAfter/MyRecipe';
+import NavbarHome from './ComponentsAfter/NavbarHome';
+
+
 
 function App() {
+ 
+  const [userLogged,setUserLogged]=useState(false)
+  const [loginToken,SetloginToken]=useState(0)
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login  setLogin={setUserLogged} SetloginToken={SetloginToken}/>} />
+          <Route path="/home" element={<Home userLogin={userLogged} setLogin={setUserLogged} />} />
+          <Route path='/signup' element={<Signup/>}/>
+          <Route path='/recipe' element={<MyRecipe loginToken={loginToken} setLogin={setUserLogged}/>}/>
+        </Routes>
+        
+      </BrowserRouter>
+      
     </div>
   );
 }
